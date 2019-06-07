@@ -1,0 +1,10 @@
+cat, 1
+dog, 5
+and, 1
+jump, 3
+tree, 2
+cat, 5
+dog, 2
+and, 2
+cat, 9
+and, 6
