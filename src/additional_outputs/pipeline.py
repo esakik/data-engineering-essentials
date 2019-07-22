@@ -25,7 +25,7 @@ if __name__ == '__main__':
                | 'judge even or odd' >> beam.ParDo(JudgeEvenOrOddFn()).with_outputs())
 
     # 主出力
-    outputs.even | 'write to even.txt' >> beam.io.WriteToText("./even", file_name_suffix=".txt")
+    outputs['even'] | 'write to even.txt' >> beam.io.WriteToText("./even", file_name_suffix=".txt")
 
     # 追加出力
     outputs.odd | 'write to odd.txt' >> beam.io.WriteToText("./odd", file_name_suffix=".txt")
