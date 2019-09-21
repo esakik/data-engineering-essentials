@@ -1,5 +1,5 @@
 # Apache Beam Python
-The cheat sheet for Apache Beam.
+A cheat sheet of Apache Beam.
 
 ## Overview
 Learn from [Apache Beam Documentation](https://beam.apache.org/documentation/).
