@@ -1,5 +1,5 @@
-# Apache Beam Documentation
-A documentation of Apache Beam.
+# apache-beam-documentation
+>A documentation of Apache Beam.
 
 ## Overview
 Learn from [Apache Beam Documentation](https://beam.apache.org/documentation/).
