@@ -1,4 +1,4 @@
-# apache-beam-documentation
+# Apache Beam Documentation
 >A documentation of Apache Beam.
 
 ## Overview
