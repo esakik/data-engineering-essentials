@@ -1,7 +1,7 @@
-# Data Platform
->Documents of Data Platform.
+# Data Platform Index
+>Documents and sample scripts of Data Platform.
 
-## Data Pipeline
+## Pipeline
 ### Apache Beam
 Learn from [Apache Beam Documentation](https://beam.apache.org/documentation/). Notes are [here](./pipeline/beam/README.md).
 
