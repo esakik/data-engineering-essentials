@@ -19,3 +19,41 @@ airflow scheduler
 ```
 
 Refer to [here](https://airflow.apache.org/docs/stable/installation.html#extra-packages) if you want to install extra packages. 
+
+## Metadata Validation
+```bash
+# make sure the pipeline is parsed successfully 
+python dags/tutorial.py
+
+# print the list of active DAGs
+airflow list_dags
+
+# prints the list of tasks the "tutorial" dag_id
+airflow list_tasks tutorial
+
+# prints the hierarchy of tasks in the tutorial DAG
+airflow list_tasks tutorial --tree
+```
+
+## Testing
+```bash
+# command layout: command subcommand dag_id task_id date
+
+# testing print_date
+airflow test tutorial print_date 2015-06-01
+
+# testing sleep
+airflow test tutorial sleep 2015-06-01
+```
+
+## Execute Dags
+```bash
+# optional, start a web server in debug mode in the background
+# airflow webserver --debug &
+
+# start your backfill on a date range
+airflow backfill tutorial -s 2015-06-01 -e 2015-06-07
+```
+
+## Notes
+- [簡易メモ](https://esa-pages.io/p/sharing/13096/posts/113/aedcba7a6a71337ef733.html)
