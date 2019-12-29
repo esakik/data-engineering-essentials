@@ -3,6 +3,6 @@
 
 ## Pipeline
 ### [Apache Beam](https://beam.apache.org/)
-- [notes](./pipeline/beam/README.md)
+- [README](./pipeline/beam/README.md)
 ### [Apache Spark](https://spark.apache.org/)
-- [notes](./pipeline/spark/README.md)
+- [README](./pipeline/spark/README.md)
