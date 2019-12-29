@@ -1,5 +1,5 @@
 # Apache Beam
->Documents of Apache Beam.
+Learn from [Apache Beam Documentation](https://beam.apache.org/documentation/). 
 
 ## Notes
 ### パイプライン開発
