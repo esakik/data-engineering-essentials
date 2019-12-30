@@ -10,12 +10,6 @@ pip install apache-airflow
 
 # initialize the database
 airflow initdb
-
-# start the web server
-airflow webserver -p 8080
-
-# start the scheduler
-airflow scheduler
 ```
 
 Refer to [here](https://airflow.apache.org/docs/stable/installation.html#extra-packages) if you want to install extra packages. 
@@ -46,7 +40,16 @@ airflow test tutorial print_date 2015-06-01
 airflow test tutorial sleep 2015-06-01
 ```
 
-## Execute Dags
+## Monitoring
+```bash
+# start the web server
+airflow webserver -p 8080
+
+# start the scheduler
+airflow scheduler
+```
+
+## DAG Runs
 ```bash
 # optional, start a web server in debug mode in the background
 # airflow webserver --debug &
