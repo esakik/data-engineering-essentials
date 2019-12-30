@@ -58,5 +58,8 @@ airflow scheduler
 airflow backfill tutorial -s 2015-06-01 -e 2015-06-07
 ```
 
+## Life Cycle
+<img width="875" alt="スクリーンショット 2019-12-30 11 18 33" src="https://user-images.githubusercontent.com/44774033/71565882-3eabf680-2af6-11ea-8067-71bfedd01406.png">
+
 ## Notes
 - [簡易メモ](https://esa-pages.io/p/sharing/13096/posts/113/aedcba7a6a71337ef733.html)
