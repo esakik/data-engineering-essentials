@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
+from airflow.utils.helpers import chain
 
 from dags.operators.hello_operator import HelloOperator
 
@@ -22,4 +23,5 @@ with dag:
     t1 = BashOperator(task_id='print_date', bash_command='date', dag=dag)
     t2 = HelloOperator(task_id='hello', name='foo_bar')
 
-    t1 >> t2
+    # t1 >> t2
+    chain(t1, t2)
