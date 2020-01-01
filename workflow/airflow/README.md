@@ -10,6 +10,9 @@ pip install apache-airflow
 
 # initialize the database
 airflow initdb
+
+# set airflow home
+export AIRFLOW_HOME=...
 ```
 
 Refer to [here](https://airflow.apache.org/docs/stable/installation.html#extra-packages) if you want to install extra packages. 
