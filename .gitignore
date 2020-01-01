@@ -131,4 +131,6 @@ dmypy.json
 # Airflow
 workflow/airflow/airflow.*
 workflow/airflow/unittests.*
+workflow/airflow/airflow-webserver.pid
+workflow/airflow/logs/
 workflow/airflow/logs/
