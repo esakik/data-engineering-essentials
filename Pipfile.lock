@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ad2697ef08820b21ffe881a94f9d5aa72febc2e5743875772207ff0beea6c1dc"
+            "sha256": "2b708f139ceca4bf33a3ba1487a6e8d204d98bdb5786be24ffb83ebfd44c1d9e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,9 @@
             "version": "==1.10.7"
         },
         "apache-beam": {
+            "extras": [
+                "gcp"
+            ],
             "hashes": [
                 "sha256:073cb6a5e7a267dc0a0b3142d45ddf62a97d9bf116c5748e8ceb3cb4eede865e",
                 "sha256:178ce5ea319e4400306772e9e386b9a45ba9160e6c5524fdb5d286e86d5b6b1e",
@@ -84,10 +87,10 @@
         },
         "babel": {
             "hashes": [
-                "sha256:af92e6106cb7c55286b25b38ad7695f8b4efb36a90ba483d7f7a6628c46158ab",
-                "sha256:e86135ae101e31e2c8ec20a4e0c5220f4eed12487d5cf3f78be7e98d3a57fc28"
+                "sha256:1aac2ae2d0d8ea368fa90906567f5c08463d98ade155c0c4bfedd6a0f7160e38",
+                "sha256:d670ea0b10f8b723672d3a6abeb87b565b244da220d76b4dba1b66269ec152d4"
             ],
-            "version": "==2.7.0"
+            "version": "==2.8.0"
         },
         "cached-property": {
             "hashes": [
@@ -95,6 +98,13 @@
                 "sha256:9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"
             ],
             "version": "==1.5.1"
+        },
+        "cachetools": {
+            "hashes": [
+                "sha256:428266a1c0d36dc5aca63a2d7c5942e88c2c898d72139fca0e97fdd2380517ae",
+                "sha256:8ea2d3ce97850f31e4a08b0e2b5e6c34997d7216a9d2c98e0f3978630d4da69a"
+            ],
+            "version": "==3.1.1"
         },
         "cattrs": {
             "hashes": [
@@ -154,10 +164,10 @@
         },
         "croniter": {
             "hashes": [
-                "sha256:0d905dbe6f131a910fd3dde792f0129788cd2cb3a8048c5f7aaa212670b0cef2",
-                "sha256:538adeb3a7f7816c3cdec6db974c441620d764c25ff4ed0146ee7296b8a50590"
+                "sha256:8984b4b27ddfc4b95b2bcec17ee31f827426cf1d717c2af79eff4b4435e23197",
+                "sha256:cfd0837246845d3f3eb463ae8790bfb7db6ac76743e8f31aacaf37830de7fb52"
             ],
-            "version": "==0.3.30"
+            "version": "==0.3.31"
         },
         "defusedxml": {
             "hashes": [
@@ -208,6 +218,13 @@
                 "sha256:ed6564e60d1daf43885d1d33f54e8d3b70e8f8132f923eb49b2ba9580bfdbf4f"
             ],
             "version": "==0.21.24"
+        },
+        "fasteners": {
+            "hashes": [
+                "sha256:007e4d2b2d4a10093f67e932e5166722d2eab83b77724156e92ad013c6226574",
+                "sha256:3a176da6b70df9bb88498e1a18a9e4a8579ed5b9141207762368a1017bf8f5ef"
+            ],
+            "version": "==0.15"
         },
         "flask": {
             "hashes": [
@@ -294,12 +311,93 @@
             ],
             "version": "==0.16.0"
         },
+        "google-api-core": {
+            "extras": [
+                "grpc"
+            ],
+            "hashes": [
+                "sha256:2d661c8d650a1df5805d0e360121cb55c55d8bd29f858fa62cbe943e59ce89f7",
+                "sha256:9006e1641599345056cc690a934e1262107c78d969d72cf96412f6db5d32147f"
+            ],
+            "version": "==1.15.0"
+        },
+        "google-apitools": {
+            "hashes": [
+                "sha256:25c44d04a6a1f48066401af9d8b8b7220564b7dcbbe9469b7edcc1981d27d8f6",
+                "sha256:c41792b0cb1a9d952545a95bb5a18376fd727e4c4977d6fa3f1643d1d51a7177"
+            ],
+            "version": "==0.5.28"
+        },
+        "google-auth": {
+            "hashes": [
+                "sha256:7bb2034a3a290190cf4e3eb8ebf29e5025c90f0b06a00ba4d1fb94bf0c6448f7",
+                "sha256:c57074e594d2c6e3e316162734e8af3e15d40252022e69414cba67de66594417"
+            ],
+            "version": "==1.10.0"
+        },
+        "google-cloud-bigquery": {
+            "hashes": [
+                "sha256:267b917a7fcaa0b61637376b89e9ce3c0e911d2c1739d4dab1981186bdc4c935",
+                "sha256:b0e471ee8ae7936ccfb2b971298f5bd9979ee4a87603d70ce25bcfafa1f40f45"
+            ],
+            "version": "==1.17.1"
+        },
+        "google-cloud-bigtable": {
+            "hashes": [
+                "sha256:40d1fc8009c228f70bd0e2176e73a3f101051ad73889b3d25a5df672c029a8bd",
+                "sha256:6c4ab93530db2232faad88a0c75f9018e35bb62d36ada3c9228d4769d54a7e12"
+            ],
+            "version": "==0.32.2"
+        },
+        "google-cloud-core": {
+            "hashes": [
+                "sha256:49036087c1170c3fad026e45189f17092b8c584a9accb2d73d1854f494e223ae",
+                "sha256:63c93d989d92a782efe8d9606ea2ad37673361ab0c3e7f965a5640d30ff14f20"
+            ],
+            "version": "==1.1.0"
+        },
+        "google-cloud-datastore": {
+            "hashes": [
+                "sha256:7a44d9b0263cbbe05963522f61ba177e64282043f30999e0bc3368fd79a3af12",
+                "sha256:ffb075abf606ebd248c3ad76ac0e6d3e93858d8c61a063139938a162a58b28d0"
+            ],
+            "version": "==1.7.4"
+        },
+        "google-cloud-pubsub": {
+            "hashes": [
+                "sha256:32dbaf9b8c16d4a14b7e1eca2805689f82f69f542a68bf1516b9c77a3ef54b73",
+                "sha256:4186386aec02752e982eeb1e399d76f1cf70eed56312934df04bfa68d8cfabf0"
+            ],
+            "version": "==0.39.1"
+        },
+        "google-resumable-media": {
+            "hashes": [
+                "sha256:5fd2e641f477e50be925a55bcfdf0b0cb97c2b92aacd7b15c1d339f70d55c1c7",
+                "sha256:cdeb8fbb3551a665db921023603af2f0d6ac59ad8b48259cb510b8799505775f"
+            ],
+            "version": "==0.4.1"
+        },
+        "googleapis-common-protos": {
+            "extras": [
+                "grpc"
+            ],
+            "hashes": [
+                "sha256:e61b8ed5e36b976b487c6e7b15f31bb10c7a0ca7bd5c0e837f4afab64b53a0c6"
+            ],
+            "version": "==1.6.0"
+        },
         "graphviz": {
             "hashes": [
                 "sha256:241fb099e32b8e8c2acca747211c8237e40c0b89f24b1622860075d59f4c4b25",
                 "sha256:60acbeee346e8c14555821eab57dbf68a169e6c10bce40e83c1bf44f63a62a01"
             ],
             "version": "==0.13.2"
+        },
+        "grpc-google-iam-v1": {
+            "hashes": [
+                "sha256:5009e831dcec22f3ff00e89405249d6a838d1449a46ac8224907aa5b0e0b1aec"
+            ],
+            "version": "==0.11.4"
         },
         "grpcio": {
             "hashes": [
@@ -380,7 +478,7 @@
                 "sha256:073a852570f92da5f744a3472af1b61e28e9f78ccf0c9117658dc32b15de7b45",
                 "sha256:d95141fbfa7ef2ec65cfd945e2af7e5a6ddbd7c8d9a25e66ff3be8e3daf9f60f"
             ],
-            "markers": "python_version == '3.7'",
+            "markers": "python_version < '3.8'",
             "version": "==1.3.0"
         },
         "iso8601": {
@@ -524,6 +622,13 @@
                 "sha256:b158b6df76edd239b8208d481dc46b6afd45a846b7812ff0ce58971cf5bc8bba"
             ],
             "version": "==2.0.0"
+        },
+        "monotonic": {
+            "hashes": [
+                "sha256:23953d55076df038541e648a53676fb24980f7a1be290cdda21300b3bc21dfb0",
+                "sha256:552a91f381532e33cbd07c6a2655a21908088962bb8fa7239ecbcc6ad1140cc7"
+            ],
+            "version": "==1.5"
         },
         "more-itertools": {
             "hashes": [

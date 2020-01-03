@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-apache-beam = "==2.15.*"
+apache-beam = {extras = ["gcp"],version = "==2.15.*"}
 apache-airflow = "==1.10.*"
 nose = "==1.3.*"
 
