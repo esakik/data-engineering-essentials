@@ -1,11 +1,9 @@
 # Apache Beam
 >Learn from [Apache Beam Documentation](https://beam.apache.org/documentation/). 
 
-![1_RosDftZut1zBzRxPEz21kw](https://user-images.githubusercontent.com/44774033/71560059-5bb9d880-2aa8-11ea-839b-b604ab4e6616.png)
-
 ## Installation
 ```bash
-pip install apache-beam
+$ pip install apache-beam
 ```
 
 ## Notes

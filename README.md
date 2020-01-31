@@ -5,6 +5,9 @@
 ### Apache Beam
 - [Home Page](https://beam.apache.org/)
 - [Examples](./pipeline/beam/README.md)
+### Apache Hadoop
+- [Home Page](https://hadoop.apache.org/)
+- [Examples](./pipeline/hadoop/README.md)
 ### Apache Spark
 - [Home Page](https://spark.apache.org/)
 - [Examples](./pipeline/spark/README.md)
