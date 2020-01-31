@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
 
-# start hdfs process
+# Format the NameNode
 sudo -u hdfs hdfs namenode -format
-sudo service hadoop-hdfs-namenode start
-sudo service hadoop-hdfs-datanode start
 
-sudo service hadoop-hdfs-namenode status
-sudo service hadoop-hdfs-datanode status
+# Start HDFS
+for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do sudo service $x start ; done
 
-# create directory for map reduce
-sudo -u hdfs hadoop fs -mkdir -p /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
-sudo -u hdfs hadoop fs -chmod 1777 /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
-sudo -u hdfs hadoop fs -chown -R mapred /var/lib/hadoop-hdfs/cache/mapred
+# Create the directories needed for Hadoop processes
+sudo /usr/lib/hadoop/libexec/init-hdfs.sh
 
-# start map reduce process
-sudo service hadoop-0.20-mapreduce-jobtracker start
-sudo service hadoop-0.20-mapreduce-tasktracker start
+# Verify the HDFS File Structure
+sudo -u hdfs hadoop fs -ls -R /
 
-sudo service hadoop-0.20-mapreduce-jobtracker status
-sudo service hadoop-0.20-mapreduce-tasktracker status
+# Start YARN
+sudo service hadoop-yarn-resourcemanager start
+sudo service hadoop-yarn-nodemanager start
+sudo service hadoop-mapreduce-historyserver start
+
+# Create User Directories
+sudo -u hdfs hadoop fs -mkdir /user/esaki01
+sudo -u hdfs hadoop fs -chown esaki01 /user/esaki01
