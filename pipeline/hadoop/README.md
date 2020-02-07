@@ -9,8 +9,8 @@ $ make build
 # run docker container
 $ make run
 
-# initialize hadoop
-[root@xxxxxxxxx /]# ./scripts/init.sh
+# start hadoop
+[root@xxxxxxxxx /]# ./scripts/start.sh
 
 # run sample application "word count"
 [root@xxxxxxxxx /]# ./scripts/wordcount.sh 
