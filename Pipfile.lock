@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "70ac145a0d12af7618a0316003a5d0ee0fc97d018c2580aaacdaa326d68c9b1e"
+            "sha256": "daf792a531cfc7d1ac10597e8505a925d5a8a38ebcd574e1f9a024c83acd4ad4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -354,6 +354,14 @@
             ],
             "version": "==1.3.0"
         },
+        "google-cloud-dataproc": {
+            "hashes": [
+                "sha256:302bc448e77f1de958ba7413fb85819eda911043f219d8fc030a356848bc6f31",
+                "sha256:c626959f16b74e6c9bd970877a60ac6e10ab9b4ac68f6c90be6195fdb89ba0b7"
+            ],
+            "index": "pypi",
+            "version": "==0.6.1"
+        },
         "google-cloud-datastore": {
             "hashes": [
                 "sha256:7a44d9b0263cbbe05963522f61ba177e64282043f30999e0bc3368fd79a3af12",
@@ -476,7 +484,7 @@
                 "sha256:06f5b3a99029c7134207dd882428a66992a9de2bef7c2b699b5641f9886c3302",
                 "sha256:b97607a1a18a5100839aec1dc26a1ea17ee0d93b20b0f008d80a5a050afb200b"
             ],
-            "markers": "python_version < '3.8'",
+            "markers": "python_version == '3.7'",
             "version": "==1.5.0"
         },
         "iso8601": {
