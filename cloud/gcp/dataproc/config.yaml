@@ -1,0 +1,5 @@
+runners:
+  dataproc:
+    zone: us-central1-a
+    instance_type: n1-standard-1
+    num_core_instances: 2
