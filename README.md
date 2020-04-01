@@ -1,13 +1,14 @@
 # Data Platform Index
->Data Platform documents and scripts.
+>Data platform documents and scripts.
 
 ## Data Pipeline
-### [Apache Beam](./pipeline/beam)
-### [Apache Hadoop](./pipeline/hadoop)
-### [Apache Spark](./pipeline/spark)
+- [Apache Hadoop](https://hadoop.apache.org/)
+- [Apache Spark](https://spark.apache.org/)
+- [Apache Beam](https://beam.apache.org/)
 
 ## Workflow Engine
-### [Apache Airflow](./workflow/airflow)
+- [Apache Airflow](https://airflow.apache.org/)
 
 ## Google Cloud Platform
-### [Cloud Dataflow](./cloud/gcp/dataflow)
+- [Google Cloud Dataflow](https://cloud.google.com/dataflow?hl=ja)
+- [Amazon EMR](https://aws.amazon.com/jp/emr/)
