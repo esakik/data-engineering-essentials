@@ -9,6 +9,9 @@
 ## Workflow Engine
 - [Apache Airflow](https://airflow.apache.org/)
 
-## Google Cloud Platform
+## Public Cloud
+### GCP
 - [Google Cloud Dataflow](https://cloud.google.com/dataflow?hl=ja)
+
+### AWS
 - [Amazon EMR](https://aws.amazon.com/jp/emr/)
