@@ -16,7 +16,3 @@ sudo -u hdfs hadoop fs -ls -R /
 sudo service hadoop-yarn-resourcemanager start
 sudo service hadoop-yarn-nodemanager start
 sudo service hadoop-mapreduce-historyserver start
-
-# Create User Directories
-sudo -u hdfs hadoop fs -mkdir /user/esaki01
-sudo -u hdfs hadoop fs -chown esaki01 /user/esaki01
