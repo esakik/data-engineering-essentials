@@ -73,21 +73,35 @@ public class WordCount extends Configured implements Tool {
             System.err.println("Usage: wordcount <in> <out>");
             System.exit(2);
         }
-        Job job = Job.getInstance(getConf(), "word count");
+
+        // JobTracker に対してジョブを投入する
+        Job job = Job.getInstance(getConf(), "WordCount");
+
+        // 入力データに応じて自動的に数が決まるMapタスクとは異なり、Reduceタスクの数は自分で指定する必要がある
         job.setNumReduceTasks(2);
+
+        // jarファイルに格納されたクラスのうちの１つを指定する
         job.setJarByClass(WordCount.class);
+
+        // Mapper、Combiner、Reducer としてどのクラスを利用するか指定する
         job.setMapperClass(TokenizerMapper.class);
         job.setCombinerClass(IntSumReducer.class);
         job.setReducerClass(IntSumReducer.class);
+
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
+
+        // テキストファイルからデータの入出力を行う
         job.setInputFormatClass(TextInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
+
+        // 入出力用のディレクトリのパス
         TextInputFormat.addInputPath(job, new Path(args[0]));
         TextOutputFormat.setOutputPath(job, new Path(args[1]));
-        job.getConfiguration().setBoolean("mapred.used.genericoptionsparser", true);
+
+        // ジョブの完了を待つ
         return (job.waitForCompletion(true) ? 0 : 1);
     }
 
