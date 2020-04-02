@@ -19,14 +19,10 @@ RUN rpm -ivh http://archive.cloudera.com/cdh5/one-click-install/redhat/6/x86_64/
 ## 疑似分散モードの設定と YARN を提供するパッケージをインストール
 RUN yum -y install hadoop-conf-pseudo
 
-ADD scripts scripts
-ADD streaming streaming
-ADD ecosystem ecosystem
-ADD WordCount.java WordCount.java
+ADD main main
+RUN chmod +x -R main
 
-RUN chmod +x -R scripts
-RUN chmod +x -R streaming
-RUN chmod +x -R ecosystem
+WORKDIR main
 
 # コマンド実行後もコンテナを起動させ続ける
 CMD ["tail", "-f", "/dev/null"]
