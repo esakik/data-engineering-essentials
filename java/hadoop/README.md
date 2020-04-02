@@ -10,17 +10,17 @@ $ make build
 $ make run
 
 # start hadoop
-[root@xxxxxxxxx /]# ./scripts/start-hadoop.sh
+[root@xxxxxxxxx main]# ./scripts/start-hadoop.sh
 ```
 
 ## Execute MapReduce Sample
 ```bash
 # compile WordCount.java and make jar
-[root@xxxxxxxxx /]# ./scripts/make-jar.sh
+[root@xxxxxxxxx main]# ./scripts/make-jar.sh
 
 # create input for WordCount.java
-[root@xxxxxxxxx /]# ./scripts/create-input-text.sh
+[root@xxxxxxxxx main]# ./scripts/create-input-text.sh
 
 # execute WordCount.java
-[root@xxxxxxxxx /]# ./scripts/execute-wordcount.sh
+[root@xxxxxxxxx main]# ./scripts/execute-wordcount.sh
 ```
