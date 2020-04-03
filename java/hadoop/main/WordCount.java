@@ -16,42 +16,58 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 public class WordCount extends Configured implements Tool {
-    // Mapper - 引数：入力キーの型、入力バリューの型、出力キーの型、出力バリューの型
+    /**
+     * Mapper<入力キーの型, 入力バリューの型, 出力キーの型, 出力バリューの型> を継承したクラス.
+     */
     public static class TokenizerMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         private final static IntWritable one = new IntWritable(1);
         private Text word = new Text();
 
         @Override
         public void setup(Context context) throws IOException, InterruptedException {
-            // Pass
+            // 初期化処理
         }
 
-        // map - 引数：その行が先頭から何バイト目の位置にあるかというバイトオフセット値（通常は利用しない）、1行分のテキスト
+        /**
+         * Map 処理を記述する.
+         *
+         * @param key その行が先頭から何バイト目の位置にあるかというバイトオフセット値（通常は利用しない）
+         * @param value 1行分のデータ
+         * @param context Context を通してジョブの設定や入出力データにアクセス可能
+         */
         @Override
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             StringTokenizer itr = new StringTokenizer(value.toString());
             while (itr.hasMoreTokens()) {
                 word.set(itr.nextToken());
-                context.write(word, one); // Context を通してジョブの設定や入出力データにアクセスできる
+                context.write(word, one);
             }
         }
 
         @Override
         public void cleanup(Context context) throws IOException, InterruptedException {
-            // Pass
+            // クリーンナップ処理
         }
     }
 
-    // Reducer - 引数：入力キーの型、入力バリューの型、出力キーの型、出力バリューの型
+    /**
+     * Reducer<入力キーの型, 入力バリューの型, 出力キーの型, 出力バリューの型> を継承したクラス.
+     */
     public static class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
         private IntWritable result = new IntWritable();
 
         @Override
         public void setup(Context context) throws IOException, InterruptedException {
-            // Pass
+            // 初期化処理
         }
 
-        // reduce - 引数：map の出力（キー、バリューのイテラブル）
+        /**
+         * Reduce 処理を記述する.
+         *
+         * @param key Map 処理の出力（キー）
+         * @param values Map 処理の出力（バリューのイテラブル）
+         * @param context Context
+         */
         @Override
         public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
             int sum = 0;
@@ -64,7 +80,7 @@ public class WordCount extends Configured implements Tool {
 
         @Override
         public void cleanup(Context context) throws IOException, InterruptedException {
-            // Pass
+            // クリーンナップ処理
         }
     }
 
