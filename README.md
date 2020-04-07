@@ -1,6 +1,13 @@
 # Data Platform Index
 >Data platform documents and scripts.
 
+## Data Collector
+### Streaming
+- [Fluentd](https://www.fluentd.org/)
+
+### Batch
+- [Embulk](https://www.embulk.org/)
+
 ## Data Pipeline
 - [Apache Hadoop](https://hadoop.apache.org/)
 - [Apache Spark](https://spark.apache.org/)
@@ -8,6 +15,7 @@
 
 ## Workflow Engine
 - [Apache Airflow](https://airflow.apache.org/)
+- [Digdag](https://www.digdag.io/)
 
 ## Public Cloud
 ### GCP
