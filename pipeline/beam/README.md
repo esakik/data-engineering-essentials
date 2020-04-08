@@ -3,7 +3,8 @@
 
 ## Installation
 ```bash
-$ pip install apache-beam
+$ pipenv install --dev
+$ pipenv shell
 ```
 
 ## Notes
