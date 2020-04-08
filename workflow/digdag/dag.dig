@@ -1,0 +1,19 @@
+timezone: Asia/Tokyo
+
+_export:
+  msg: hello world!!
+
++step1:
+  echo>: step1 ${session_time}
+
+  _check:
+    echo>: ok!
+
+  _error:
+    echo>: error occurred(${error.message})
+
++step2:
+  echo>: step2 ${msg}
+
++step3:
+  py>: task.Task.step
