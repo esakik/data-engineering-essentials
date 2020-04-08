@@ -1,0 +1,13 @@
+in:
+  type: randomj
+  rows: 10
+  threads: 1
+  primary_key: id
+  schema:
+    - {name: id, type: long}
+    - {name: value, type: string, length: 10}
+out:
+  type: command
+  command: "cat - > '/output/output.txt'"
+  formatter:
+    type: fast_jsonl
