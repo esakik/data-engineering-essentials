@@ -1,5 +1,5 @@
 # Data Platform Index
->Data platform documents and scripts.
+>Samples and documents of data platform.
 
 ## Data Collector
 ### Streaming
