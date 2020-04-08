@@ -2,11 +2,9 @@
 >Samples and documents of data platform.
 
 ## Data Collector
-### Streaming
-- [Fluentd](https://www.fluentd.org/)
+- [Fluentd](https://www.fluentd.org/) (Streaming)
 
-### Batch
-- [Embulk](https://www.embulk.org/)
+- [Embulk](https://www.embulk.org/) (Batch)
 
 ## Data Pipeline
 - [Apache Hadoop](https://hadoop.apache.org/)
