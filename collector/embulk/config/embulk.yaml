@@ -6,6 +6,11 @@ in:
   schema:
     - {name: id, type: long}
     - {name: value, type: string, length: 10}
+filters:
+  - type: column
+    columns:
+      - {name: id, type: long}
+      - {name: name, src: value}
 out:
   type: command
   command: "cat - > '/output/output.txt'"
