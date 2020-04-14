@@ -128,9 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-workflow/airflow/airflow.*
-workflow/airflow/unittests.*
-workflow/airflow/airflow-webserver.pid
-workflow/airflow/logs/
-workflow/airflow/logs/
+**/airflow/airflow.*
+**/airflow/unittests.*
+**/airflow/airflow-webserver.pid
+**/airflow/logs/
 .digdag
+**/mongo/db/
