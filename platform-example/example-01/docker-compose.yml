@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    restart: always
+    env_file:
+      - ./mongo/.env
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo/db:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express
+    restart: always
+    env_file:
+      - ./mongo/.env
+    ports:
+      - 8081:8081
+
+  collector:
+    build: collector
+    container_name: collector
+    links:
+      - mongo
+
+#  jupyter:
+#    build: jupyter
+#    container_name: jupyter
+#    ports:
+#      - 8888:8888
