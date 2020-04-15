@@ -28,8 +28,10 @@ services:
     links:
       - mongo
 
-#  jupyter:
-#    build: jupyter
-#    container_name: jupyter
-#    ports:
-#      - 8888:8888
+  jupyter:
+    build: jupyter
+    container_name: jupyter
+    ports:
+      - 8888:8888
+    volumes:
+      - ${PWD}/jupyter/notebooks:/app/notebooks

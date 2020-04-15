@@ -8,4 +8,4 @@ jupyter-run:
 
 .PHONY: all-build-run
 all-build-run:
-	docker-compose up -d --build
+	docker-compose up --build

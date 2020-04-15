@@ -1,6 +1,6 @@
-FROM python:3.7
+FROM jupyter/pyspark-notebook
 
-RUN pip install jupyter pandas pymongo
+RUN pip install pymongo
 
 WORKDIR /app
 ADD start.sh /app/
