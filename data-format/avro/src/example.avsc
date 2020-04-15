@@ -1,0 +1,11 @@
+{
+  "namespace": "jp.mwsoft.example.response",
+  "type": "record",
+  "name": "page",
+  "fields": [
+      {"name": "url", "type": "string"},
+      {"name": "top_url", "type": "string"},
+      {"name": "header_encoding", "type": "string"},
+      {"name": "contents", "type": "bytes"}
+  ]
+}
