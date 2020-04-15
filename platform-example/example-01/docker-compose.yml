@@ -7,7 +7,7 @@ services:
     container_name: mongo
     restart: always
     env_file:
-      - ./mongo/.env
+      - ./.env
     ports:
       - 27017:27017
     volumes:
@@ -18,7 +18,7 @@ services:
     container_name: mongo-express
     restart: always
     env_file:
-      - ./mongo/.env
+      - ./.env
     ports:
       - 8081:8081
 
@@ -31,6 +31,8 @@ services:
   jupyter:
     build: jupyter
     container_name: jupyter
+    env_file:
+      - ./.env
     ports:
       - 8888:8888
     volumes:
