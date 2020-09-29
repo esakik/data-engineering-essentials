@@ -14,4 +14,4 @@ http://127.0.0.1:8888/?token=xxxx
 ```
 
 ## Notes
-- [基本概念](https://esa-pages.io/p/sharing/13096/posts/112/4b1032f790873f429646.html)
+- [基本概念](https://www.notion.so/Apache-Spark-fe545988ea1f44dbad4724ccf5f4d1c6)
